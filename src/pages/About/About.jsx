@@ -22,7 +22,7 @@ function About() {
     </Navbar>
 
      <div className='imgcontainer_a'>
-     <img src="/src/assets/myself2.png" className='profilepicture' alt="Placeholder" />
+     <img src="/myself2.png" className='profilepicture' alt="Placeholder" />
     </div>
 
       <Card className="shadow-sm" style={{ maxWidth: 1200, margin: "24px auto", textAlign: "justify"}}>

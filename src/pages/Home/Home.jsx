@@ -26,7 +26,7 @@ function Home() {
         <p className='title'>Welcome to my Portfolio Website. Feel free to explore my CV and About sections for more information.</p>
     </Container>
     <div className='imgcontainer'>
-     <img src="/src/assets/myself2.png" className='profilepicture' alt="Placeholder" />
+     <img src="/myself2.png" className='profilepicture' alt="Placeholder" />
     </div>
     </>
   )

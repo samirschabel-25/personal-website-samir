@@ -114,33 +114,33 @@ const educations = [
 ];
 
 const skills = [
-  { src: "/src/assets/react.png", alt: "React" },
-  { src: "/src/assets/angular.png", alt: "Angular" },
-  { src: "/src/assets/html5.png", alt: "HTML5" },
-  { src: "/src/assets/css3.png", alt: "CSS3" },
-  { src: "/src/assets/java.png", alt: "Java" },
-  { src: "/src/assets/springboot.png", alt: "Spring Boot" },
-  { src: "/src/assets/postgres.png", alt: "PostgreSQL" },
-  { src: "/src/assets/python.png", alt: "Python" },
-  { src: "/src/assets/mongodb.png", alt: "MongoDB" },
-  { src: "/src/assets/sql.png", alt: "SQL" },
-  { src: "/src/assets/vscode.png", alt: "Visual Studio Code" },
-  { src: "/src/assets/github.png", alt: "Github" },
-  { src: "/src/assets/git.png", alt: "Git" },
+  { src: "/react.png", alt: "React" },
+  { src: "/angular.png", alt: "Angular" },
+  { src: "/html5.png", alt: "HTML5" },
+  { src: "/CSS3.png", alt: "CSS3" },
+  { src: "/java.png", alt: "Java" },
+  { src: "/springboot.png", alt: "Spring Boot" },
+  { src: "/postgres.png", alt: "PostgreSQL" },
+  { src: "/python.png", alt: "Python" },
+  { src: "/mongodb.png", alt: "MongoDB" },
+  { src: "/sql.png", alt: "SQL" },
+  { src: "/vscode.png", alt: "Visual Studio Code" },
+  { src: "/github.png", alt: "Github" },
+  { src: "/git.png", alt: "Git" },
 ];
 
 const languages = [
-  { src: "/src/assets/germany.png", alt: "German - Business fluent" },
-  { src: "/src/assets/english.png", alt: "English - Mother tongue" },
-  { src: "/src/assets/arabic.png", alt: "Arabic - Beginner" },
+  { src: "/germany.png", alt: "German - Business fluent" },
+  { src: "/english.png", alt: "English - Mother tongue" },
+  { src: "/arabic.png", alt: "Arabic - Beginner" },
 ];
 
 const hobbies = [
-  { src: "/src/assets/runner.jpg", alt: "Jogging" },
-  { src: "/src/assets/singing.jpg", alt: "Singing" },
-  { src: "/src/assets/book.jpg", alt: "Reading" },
-  { src: "/src/assets/contentcreator.jpg", alt: "Content Creating" },
-  { src: "/src/assets/traveling.jpg", alt: "Traveling" },
+  { src: "/runner.jpg", alt: "Jogging" },
+  { src: "/singing.jpg", alt: "Singing" },
+  { src: "/book.jpg", alt: "Reading" },
+  { src: "/contentcreator.jpg", alt: "Content Creating" },
+  { src: "/traveling.jpg", alt: "Traveling" },
 ];
 
   return (
@@ -154,7 +154,7 @@ const hobbies = [
     loop
     playsInline
   >
-    <source src={"/src/assets/work.mp4"} type="video/mp4" />
+    <source src={"/work.mp4"} type="video/mp4" />
   </video>
 
    <Button className='btn-modal' onClick={() => setShowWork(true)}>Work Experience</Button>
@@ -203,7 +203,7 @@ const hobbies = [
     loop
     playsInline
   >
-    <source src={"/src/assets/edu.mp4"} type="video/mp4" />
+    <source src={"/edu.mp4"} type="video/mp4" />
   </video>
 
  <Button className='btn-modal' onClick={() => setShowEdu(true)}>Education</Button>
@@ -253,7 +253,7 @@ const hobbies = [
     loop
     playsInline
   >
-    <source src={"/src/assets/skills.mp4"} type="video/mp4" />
+    <source src={"/skills.mp4"} type="video/mp4" />
   </video>
 
      <Button className='btn-modal' onClick={() => setShowSkills(true)}>Programming Skills</Button>
@@ -292,7 +292,7 @@ const hobbies = [
     loop
     playsInline
   >
-    <source src={"/src/assets/language_2.mp4"} type="video/mp4" />
+    <source src={"/language_2.mp4"} type="video/mp4" />
   </video>
 
     <Button className='btn-modal' onClick={() => setShowLanguages(true)}>Language Skills</Button>
@@ -328,7 +328,7 @@ const hobbies = [
     loop
     playsInline
   >
-    <source src={"/src/assets/hobbies.mp4"} type="video/mp4" />
+    <source src={"/hobbies.mp4"} type="video/mp4" />
   </video>
 
    <Button className='btn-modal' onClick={() => setShowH(true)}>Hobbies</Button>
