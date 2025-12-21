@@ -17,6 +17,7 @@ function About() {
               <Nav.Link as={NavLink} to="/">Home</Nav.Link>
               <Nav.Link as={NavLink} to="/about">About</Nav.Link>
               <Nav.Link as={NavLink} to="/cv">Curriculum Vitae</Nav.Link>
+               <Nav.Link as={NavLink} to="/projects">Projects</Nav.Link>
           </Nav>
             </Navbar.Collapse>
         </Container>
