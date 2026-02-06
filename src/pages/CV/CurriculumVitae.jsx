@@ -15,7 +15,7 @@ function CurriculumVitae() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link as={NavLink} to="/">
+              <Nav.Link as={NavLink} to="/home">
                 Home
               </Nav.Link>
               <Nav.Link as={NavLink} to="/about">
@@ -24,14 +24,16 @@ function CurriculumVitae() {
               <Nav.Link as={NavLink} to="/cv">
                 Curriculum Vitae
               </Nav.Link>
-               <Nav.Link as={NavLink} to="/projects">Projects</Nav.Link>
+              <Nav.Link as={NavLink} to="/projects">
+                Projects
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
 
       <Container className="mt-4">
-        <h1 className="title">Curriculum Vitae</h1>
+        <h1 className="title_home">Curriculum Vitae</h1>
         <Cards />
       </Container>
     </>
