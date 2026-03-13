@@ -10,6 +10,48 @@ import Cards from "../../components/Cards";
 function CurriculumVitae() {
   const [scrolled, setScrolled] = useState(false);
 
+  const certificates = [
+    {
+      title: "Zertifikat neuefische GmbH – Web Development",
+      description: "Zertifikat des Trägers im Bereich Web Development.",
+      file: "/public/Zertifikat_Web_Development.pdf",
+    },
+    {
+      title: "Zertifikat neuefische GmbH – Java Development",
+      description: "Zertifikat des Trägers im Bereich Java Development.",
+      file: "/public/Zertifikat_Java_Development.pdf",
+    },
+    {
+      title:
+        "Weiterbildungszertifikat Spiced Academy & neuefische GmbH – Data Science & KI",
+      description:
+        "Zertifikat des Trägers im Bereich Data Science und Künstliche Intelligenz.",
+      file: "/public/Data_Science_AI_Zertifikat.pdf",
+    },
+    {
+      title: "IHK Zertifikat – Data Science & KI",
+      description:
+        "IHK-Zertifikat im Bereich Data Science und Künstliche Intelligenz.",
+      file: "/public/IHK-Zertifikat-Fachkraft_Data_Science_KI.pdf",
+    },
+    {
+      title: "IHK Zertifikat – Data AI Foundations",
+      description: "Zertifikat des IHK-Programms mit Data AI Foundations.",
+      file: "/public/IHK-Zertifikat-Data_AI_Foundations.pdf",
+    },
+    {
+      title: "IHK Zertifikat – Machine Learning",
+      description: "Zertifikat des IHK-Programms mit Machine Learning.",
+      file: "/public/IHK-Zertifikat-Machine_Learning.pdf",
+    },
+    {
+      title: "IHK Zertifikat – Advanced AI Capstone Project",
+      description:
+        "Zertifikat des IHK-Programms mit Advanced AI Capstone Project.",
+      file: "/public/IHK-Zertifikat-Advanced_AI_Capstone_Project.pdf",
+    },
+  ];
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
     onScroll();
@@ -17,7 +59,6 @@ function CurriculumVitae() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Reveal animation (ohne Library)
   useEffect(() => {
     const els = document.querySelectorAll(".reveal");
     const io = new IntersectionObserver(
@@ -92,7 +133,6 @@ function CurriculumVitae() {
             </p>
 
             <div className="ctaRow">
-              {/* Passe den Pfad an, falls deine PDF anders heißt */}
               <Button
                 as="a"
                 href="/Samir_Schabel_Lebenslauf_2026.pdf"
@@ -119,6 +159,9 @@ function CurriculumVitae() {
               <div className="quickNavTitle">Quick navigation</div>
               <a className="quickNavLink" href="#cv-cards">
                 CV cards
+              </a>
+              <a className="quickNavLink" href="#cv-certificates">
+                Certificates
               </a>
               <a className="quickNavLink" href="#cv-contact">
                 Contact
@@ -147,6 +190,51 @@ function CurriculumVitae() {
 
             <div className="cardsWrapper">
               <Cards />
+            </div>
+          </section>
+
+          <section
+            id="cv-certificates"
+            className="glassSection reveal certificatesSection"
+          >
+            <div className="sectionHeader">
+              <h2 className="sectionTitle">Certificates</h2>
+              <p className="sectionSub">
+                Hier findest du meine Zertifikate und Nachweise als
+                PDF-Download.
+              </p>
+            </div>
+
+            <div className="certificateGrid">
+              {certificates.map((cert, index) => (
+                <div className="certificateCard" key={index}>
+                  <div className="certificateIcon">🎓</div>
+                  <h3 className="certificateTitle">{cert.title}</h3>
+                  <p className="certificateText">{cert.description}</p>
+
+                  <div className="certificateActions">
+                    <Button
+                      as="a"
+                      href={cert.file}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="ctaPrimary"
+                    >
+                      Open PDF
+                    </Button>
+
+                    <Button
+                      as="a"
+                      href={cert.file}
+                      download
+                      variant="outline-light"
+                      className="ctaSecondary"
+                    >
+                      Download
+                    </Button>
+                  </div>
+                </div>
+              ))}
             </div>
           </section>
 

@@ -23,12 +23,12 @@ function Home() {
     if (!el) return;
 
     const rect = el.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width;  // 0..1
-    const y = (e.clientY - rect.top) / rect.height;  // 0..1
+    const x = (e.clientX - rect.left) / rect.width; // 0..1
+    const y = (e.clientY - rect.top) / rect.height; // 0..1
 
     // sanfter Tilt (nicht zu heftig)
-    const ry = (x - 0.5) * 10;  // rotateY
-    const rx = (0.5 - y) * 8;   // rotateX
+    const ry = (x - 0.5) * 10; // rotateY
+    const rx = (0.5 - y) * 8; // rotateX
 
     setTilt({ rx, ry });
   };
@@ -39,7 +39,7 @@ function Home() {
     () => ({
       transform: `perspective(900px) rotateX(${tilt.rx}deg) rotateY(${tilt.ry}deg) translateZ(0)`,
     }),
-    [tilt]
+    [tilt],
   );
 
   return (
@@ -60,7 +60,10 @@ function Home() {
             Samir<span className="brandAccent">.</span>Portfolio
           </Navbar.Brand>
 
-          <Navbar.Toggle aria-controls="basic-navbar-nav" className="navToggle" />
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            className="navToggle"
+          />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto navLinks">
               <Nav.Link as={NavLink} to="/home">
@@ -80,7 +83,12 @@ function Home() {
         </Container>
       </Navbar>
 
-      <main className="hero" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} ref={heroRef}>
+      <main
+        className="hero"
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        ref={heroRef}
+      >
         <Container className="heroInner">
           <div className="heroLeft">
             <p className="badgePill">
@@ -92,15 +100,24 @@ function Home() {
             </h1>
 
             <p className="heroSub">
-              Ich baue moderne Web-Apps, arbeite gerne mit Daten & KI und liebe saubere,
-              skalierbare Lösungen – Frontend wie Backend.
+              Ich baue moderne Web-Apps, arbeite gerne mit Daten & KI und liebe
+              saubere, skalierbare Lösungen – Frontend wie Backend.
+            </p>
+
+            <p className="heroCert">
+              🎓 IHK-zertifiziert in Data Science &amp; Künstlicher Intelligenz
             </p>
 
             <div className="ctaRow">
               <Button as={Link} to="/projects" className="ctaPrimary">
                 View Projects
               </Button>
-              <Button as={Link} to="/cv" variant="outline-light" className="ctaSecondary">
+              <Button
+                as={Link}
+                to="/cv"
+                variant="outline-light"
+                className="ctaSecondary"
+              >
                 Open CV
               </Button>
             </div>
