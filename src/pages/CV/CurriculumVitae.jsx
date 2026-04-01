@@ -10,47 +10,47 @@ import Cards from "../../components/Cards";
 function CurriculumVitae() {
   const [scrolled, setScrolled] = useState(false);
 
- const certificates = [
-  {
-    title: "Zertifikat neuefische GmbH – Web Development",
-    description: "Zertifikat des Trägers im Bereich Web Development.",
-    file: "/Zertifikat_Web_Development.pdf",
-  },
-  {
-    title: "Zertifikat neuefische GmbH – Java Development",
-    description: "Zertifikat des Trägers im Bereich Java Development.",
-    file: "/Zertifikat_Java_Development.pdf",
-  },
-  {
-    title:
-      "Weiterbildungszertifikat Spiced Academy & neuefische GmbH – Data Science & KI",
-    description:
-      "Zertifikat des Trägers im Bereich Data Science und Künstliche Intelligenz.",
-    file: "/Data_Science_AI_Zertifikat.pdf",
-  },
-  {
-    title: "IHK Zertifikat – Data Science & KI",
-    description:
-      "IHK-Zertifikat im Bereich Data Science und Künstliche Intelligenz.",
-    file: "/IHK-Zertifikat-Fachkraft_Data_Science_KI.pdf",
-  },
-  {
-    title: "IHK Zertifikat – Data AI Foundations",
-    description: "Zertifikat des IHK-Programms mit Data AI Foundations.",
-    file: "/IHK-Zertifikat-Data_AI_Foundations.pdf",
-  },
-  {
-    title: "IHK Zertifikat – Machine Learning",
-    description: "Zertifikat des IHK-Programms mit Machine Learning.",
-    file: "/IHK-Zertifikat-Machine_Learning.pdf",
-  },
-  {
-    title: "IHK Zertifikat – Advanced AI Capstone Project",
-    description:
-      "Zertifikat des IHK-Programms mit Advanced AI Capstone Project.",
-    file: "/IHK-Zertifikat-Advanced_AI_Capstone_Project.pdf",
-  },
-];
+  const certificates = [
+    {
+      title: "Zertifikat neuefische GmbH – Web Development",
+      description: "Zertifikat des Trägers im Bereich Web Development.",
+      file: "/Zertifikat_Web_Development.pdf",
+    },
+    {
+      title: "Zertifikat neuefische GmbH – Java Development",
+      description: "Zertifikat des Trägers im Bereich Java Development.",
+      file: "/Zertifikat_Java_Development.pdf",
+    },
+    {
+      title:
+        "Weiterbildungszertifikat Spiced Academy & neuefische GmbH – Data Science & KI",
+      description:
+        "Zertifikat des Trägers im Bereich Data Science und Künstliche Intelligenz.",
+      file: "/Data_Science_AI_Zertifikat.pdf",
+    },
+    {
+      title: "IHK Zertifikat – Data Science & KI",
+      description:
+        "IHK-Zertifikat im Bereich Data Science und Künstliche Intelligenz.",
+      file: "/IHK-Zertifikat-Fachkraft_Data_Science_KI.pdf",
+    },
+    {
+      title: "IHK Zertifikat – Data AI Foundations",
+      description: "Zertifikat des IHK-Programms mit Data AI Foundations.",
+      file: "/IHK-Zertifikat-Data_AI_Foundations.pdf",
+    },
+    {
+      title: "IHK Zertifikat – Machine Learning",
+      description: "Zertifikat des IHK-Programms mit Machine Learning.",
+      file: "/IHK-Zertifikat-Applied_Machine_Learning.pdf",
+    },
+    {
+      title: "IHK Zertifikat – Advanced AI Capstone Project",
+      description:
+        "Zertifikat des IHK-Programms mit Advanced AI Capstone Project.",
+      file: "/IHK-Zertifikat-Advanced_AI_Capstone_Project.pdf",
+    },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
