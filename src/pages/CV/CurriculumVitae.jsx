@@ -12,43 +12,19 @@ function CurriculumVitae() {
 
   const certificates = [
     {
-      title: "Zertifikat neuefische GmbH – Web Development",
-      description: "Zertifikat des Trägers im Bereich Web Development.",
+      title: "Web Development Certificate",
+      description: "Completed intensive training in modern web development.",
       file: "/Zertifikat_Web_Development.pdf",
     },
     {
-      title: "Zertifikat neuefische GmbH – Java Development",
-      description: "Zertifikat des Trägers im Bereich Java Development.",
+      title: "Java Development Certificate",
+      description: "Backend development with Java & Spring Boot.",
       file: "/Zertifikat_Java_Development.pdf",
     },
     {
-      title:
-        "Weiterbildungszertifikat Spiced Academy & neuefische GmbH – Data Science & KI",
-      description:
-        "Zertifikat des Trägers im Bereich Data Science und Künstliche Intelligenz.",
-      file: "/Data_Science_AI_Zertifikat.pdf",
-    },
-    {
-      title: "IHK Zertifikat – Data Science & KI",
-      description:
-        "IHK-Zertifikat im Bereich Data Science und Künstliche Intelligenz.",
+      title: "IHK Data Science & AI",
+      description: "Official certification in Data Science & AI.",
       file: "/IHK-Zertifikat-Fachkraft_Data_Science_KI.pdf",
-    },
-    {
-      title: "IHK Zertifikat – Data AI Foundations",
-      description: "Zertifikat des IHK-Programms mit Data AI Foundations.",
-      file: "/IHK-Zertifikat-Data_AI_Foundations.pdf",
-    },
-    {
-      title: "IHK Zertifikat – Machine Learning",
-      description: "Zertifikat des IHK-Programms mit Machine Learning.",
-      file: "/IHK-Zertifikat-Applied_Machine_Learning.pdf",
-    },
-    {
-      title: "IHK Zertifikat – Advanced AI Capstone Project",
-      description:
-        "Zertifikat des IHK-Programms mit Advanced AI Capstone Project.",
-      file: "/IHK-Zertifikat-Advanced_AI_Capstone_Project.pdf",
     },
   ];
 
@@ -59,29 +35,8 @@ function CurriculumVitae() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    const els = document.querySelectorAll(".reveal");
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) e.target.classList.add("isVisible");
-        });
-      },
-      { threshold: 0.12 },
-    );
-
-    els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
-  }, []);
-
   return (
     <div className="cvPage">
-      <div className="bgBlobs" aria-hidden="true">
-        <span className="blob blob1" />
-        <span className="blob blob2" />
-        <span className="blob blob3" />
-      </div>
-
       <Navbar
         expand="lg"
         className={`glassNav ${scrolled ? "navbarScrolled" : ""}`}
@@ -91,20 +46,17 @@ function CurriculumVitae() {
             Samir<span className="brandAccent">.</span>Portfolio
           </Navbar.Brand>
 
-          <Navbar.Toggle
-            aria-controls="basic-navbar-nav"
-            className="navToggle"
-          />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Toggle />
+          <Navbar.Collapse>
             <Nav className="ms-auto navLinks">
-              <Nav.Link as={NavLink} to="/home">
+              <Nav.Link as={NavLink} to="/">
                 Home
               </Nav.Link>
               <Nav.Link as={NavLink} to="/about">
                 About
               </Nav.Link>
               <Nav.Link as={NavLink} to="/cv">
-                Curriculum Vitae
+                CV
               </Nav.Link>
               <Nav.Link as={NavLink} to="/projects">
                 Projects
@@ -119,20 +71,16 @@ function CurriculumVitae() {
 
       <header className="cvHero">
         <Container className="cvHeroInner">
-          <div className="cvHeroLeft reveal">
-            <p className="badgePill">
-              <span className="dot" /> Curriculum Vitae
-            </p>
-
+          <div className="cvHeroLeft">
             <h1 className="heroTitle">
-              A clean overview of my{" "}
-              <span className="gradientText">experience</span>, education &
-              skills.
+              Samir Schabel —{" "}
+              <span className="gradientText">Software Developer</span>
             </h1>
 
             <p className="heroSub">
-              Hier findest du meinen Lebenslauf im Überblick. Wenn du willst,
-              kannst du ihn auch direkt als PDF herunterladen.
+              Frontend-focused developer with fullstack experience building
+              scalable web applications. Strong background in Angular, React,
+              Java and growing expertise in AI & data-driven solutions.
             </p>
 
             <div className="ctaRow">
@@ -140,10 +88,9 @@ function CurriculumVitae() {
                 as="a"
                 href="/Samir_Schabel_Lebenslauf_2026.pdf"
                 target="_blank"
-                rel="noreferrer"
                 className="ctaPrimary"
               >
-                Download PDF
+                Download CV
               </Button>
 
               <Button
@@ -152,29 +99,18 @@ function CurriculumVitae() {
                 variant="outline-light"
                 className="ctaSecondary"
               >
-                See Projects
+                View Projects
               </Button>
             </div>
           </div>
 
-          <div className="cvHeroRight reveal">
+          <div className="cvHeroRight">
             <div className="quickNav">
-              <div className="quickNavTitle">Quick navigation</div>
-              <a className="quickNavLink" href="#cv-cards">
-                CV cards
-              </a>
-              <a className="quickNavLink" href="#cv-certificates">
-                Certificates
-              </a>
-              <a className="quickNavLink" href="#cv-contact">
-                Contact
-              </a>
-            </div>
-
-            <div className="miniHint">
-              <div className="miniHintTitle">Tip</div>
-              <div className="miniHintText">
-                Klick auf die Cards, um Details schneller zu scannen.
+              <div className="quickNavTitle">Overview</div>
+              <div className="quickNavText">
+                ✔ Web Development (Frontend & Backend) <br />
+                ✔ Angular & React <br />
+                ✔ Java & APIs <br />✔ AI & Data Science
               </div>
             </div>
           </div>
@@ -183,11 +119,11 @@ function CurriculumVitae() {
 
       <main className="cvMain">
         <Container>
-          <section id="cv-cards" className="glassSection reveal">
+          <section className="glassSection">
             <div className="sectionHeader">
-              <h2 className="sectionTitle">Curriculum Vitae</h2>
+              <h2 className="sectionTitle">Experience & Skills</h2>
               <p className="sectionSub">
-                Alles Wichtige kompakt — Experience, Education, Skills.
+                Key experience and technical skills at a glance.
               </p>
             </div>
 
@@ -196,22 +132,17 @@ function CurriculumVitae() {
             </div>
           </section>
 
-          <section
-            id="cv-certificates"
-            className="glassSection reveal certificatesSection"
-          >
+          <section className="glassSection certificatesSection">
             <div className="sectionHeader">
               <h2 className="sectionTitle">Certificates</h2>
               <p className="sectionSub">
-                Hier findest du meine Zertifikate und Nachweise als
-                PDF-Download.
+                Verified training and certifications.
               </p>
             </div>
 
             <div className="certificateGrid">
               {certificates.map((cert, index) => (
                 <div className="certificateCard" key={index}>
-                  <div className="certificateIcon">🎓</div>
                   <h3 className="certificateTitle">{cert.title}</h3>
                   <p className="certificateText">{cert.description}</p>
 
@@ -220,10 +151,9 @@ function CurriculumVitae() {
                       as="a"
                       href={cert.file}
                       target="_blank"
-                      rel="noreferrer"
                       className="ctaPrimary"
                     >
-                      Open PDF
+                      Open
                     </Button>
 
                     <Button
@@ -241,11 +171,11 @@ function CurriculumVitae() {
             </div>
           </section>
 
-          <section id="cv-contact" className="contactRow reveal">
+          <section className="contactRow">
             <div className="contactCard">
-              <div className="contactTitle">Want to get in touch?</div>
+              <div className="contactTitle">Let’s work together</div>
               <div className="contactText">
-                Schreib mir gerne — oder schau dir direkt meine Projekte an.
+                Feel free to reach out or explore my projects.
               </div>
               <div className="contactActions">
                 <Button as={Link} to="/projects" className="ctaPrimary">
@@ -253,11 +183,11 @@ function CurriculumVitae() {
                 </Button>
                 <Button
                   as={Link}
-                  to="/about"
+                  to="/contact"
                   variant="outline-light"
                   className="ctaSecondary"
                 >
-                  About me
+                  Contact
                 </Button>
               </div>
             </div>

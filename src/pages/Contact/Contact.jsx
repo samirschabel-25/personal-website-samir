@@ -37,7 +37,7 @@ function Contact() {
           <Navbar.Toggle className="navToggle" />
           <Navbar.Collapse>
             <Nav className="ms-auto navLinks">
-              <Nav.Link as={NavLink} to="/home">
+              <Nav.Link as={NavLink} to="/">
                 Home
               </Nav.Link>
               <Nav.Link as={NavLink} to="/about">

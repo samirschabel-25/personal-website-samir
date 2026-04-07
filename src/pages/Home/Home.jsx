@@ -23,12 +23,11 @@ function Home() {
     if (!el) return;
 
     const rect = el.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width; // 0..1
-    const y = (e.clientY - rect.top) / rect.height; // 0..1
+    const x = (e.clientX - rect.left) / rect.width;
+    const y = (e.clientY - rect.top) / rect.height;
 
-    // sanfter Tilt (nicht zu heftig)
-    const ry = (x - 0.5) * 10; // rotateY
-    const rx = (0.5 - y) * 8; // rotateX
+    const ry = (x - 0.5) * 10;
+    const rx = (0.5 - y) * 8;
 
     setTilt({ rx, ry });
   };
@@ -44,7 +43,6 @@ function Home() {
 
   return (
     <div className="homePage">
-      {/* Deko-Blobs im Hintergrund */}
       <div className="bgBlobs" aria-hidden="true">
         <span className="blob blob1" />
         <span className="blob blob2" />
@@ -57,23 +55,20 @@ function Home() {
       >
         <Container>
           <Navbar.Brand as={Link} to="/home" className="brand">
-            Samir<span className="brandAccent">.</span>Portfolio
+            Samir Schabel
           </Navbar.Brand>
 
-          <Navbar.Toggle
-            aria-controls="basic-navbar-nav"
-            className="navToggle"
-          />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Toggle className="navToggle" />
+          <Navbar.Collapse>
             <Nav className="ms-auto navLinks">
-              <Nav.Link as={NavLink} to="/home">
+              <Nav.Link as={NavLink} to="/">
                 Home
               </Nav.Link>
               <Nav.Link as={NavLink} to="/about">
                 About
               </Nav.Link>
               <Nav.Link as={NavLink} to="/cv">
-                Curriculum Vitae
+                CV
               </Nav.Link>
               <Nav.Link as={NavLink} to="/projects">
                 Projects
@@ -95,20 +90,22 @@ function Home() {
         <Container className="heroInner">
           <div className="heroLeft">
             <p className="badgePill">
-              <span className="dot" /> Fullstack • Data Science • AI
+              <span className="dot" /> Frontend Developer • Java Developer
             </p>
 
             <h1 className="heroTitle">
-              Welcome to <span className="gradientText">my Portfolio</span>
+              Hi, I'm <span className="gradientText">Samir Schabel</span>
             </h1>
 
             <p className="heroSub">
-              Ich baue moderne Web-Apps, arbeite gerne mit Daten & KI und liebe
-              saubere, skalierbare Lösungen – Frontend wie Backend.
+              I build scalable web applications using Front - and Backend
+              Technologies like Spring Boot, Angular and React, focusing on
+              clean architecture, performance and great user experience.
             </p>
 
             <p className="heroCert">
-              🎓 IHK-zertifiziert in Data Science &amp; Künstlicher Intelligenz
+              🎓 Certified in Web Development 🎓 Certified in Java
+              Development(Fullstack)
             </p>
 
             <div className="ctaRow">
@@ -121,7 +118,7 @@ function Home() {
                 variant="outline-light"
                 className="ctaSecondary"
               >
-                Open CV
+                Download CV
               </Button>
             </div>
 
@@ -130,21 +127,23 @@ function Home() {
                 <div className="statNumber">⚡</div>
                 <div className="statText">
                   <div className="statLabel">Focus</div>
-                  <div className="statValue">Clean UI & APIs</div>
+                  <div className="statValue">Scalable Web Apps</div>
                 </div>
               </div>
               <div className="statCard">
                 <div className="statNumber">🧠</div>
                 <div className="statText">
-                  <div className="statLabel">Interests</div>
-                  <div className="statValue">AI • CV • DS</div>
+                  <div className="statLabel">Expertise</div>
+                  <div className="statValue">
+                    Angular • React • Spring Boot{" "}
+                  </div>
                 </div>
               </div>
               <div className="statCard">
                 <div className="statNumber">🛠️</div>
                 <div className="statText">
-                  <div className="statLabel">Stack</div>
-                  <div className="statValue">React • Java • Python</div>
+                  <div className="statLabel">Tech</div>
+                  <div className="statValue">React • Java</div>
                 </div>
               </div>
             </div>
@@ -152,22 +151,17 @@ function Home() {
 
           <div className="heroRight">
             <div className="profileShell" style={profileStyle}>
-              <div className="profileGlow" aria-hidden="true" />
+              <div className="profileGlow" />
               <img
-                src="/myself2.png"
+                src="/Bewerbungsfoto_Samir.png"
                 className="profileImg"
-                alt="Portrait of Samir"
+                alt="Samir Schabel portrait"
                 draggable="false"
               />
               <div className="profileFooter">
-                <span className="ping" aria-hidden="true" />
+                <span className="ping" />
                 <span>Open for opportunities</span>
               </div>
-            </div>
-
-            <div className="scrollHint" aria-hidden="true">
-              <span className="mouse" />
-              <span className="scrollText">Scroll</span>
             </div>
           </div>
         </Container>
