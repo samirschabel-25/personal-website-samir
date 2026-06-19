@@ -27,6 +27,23 @@ const projects = [
     desc: "Card Creator mit UI/UX-Fokus und Komponenten-Logik. Live Demo + Code im Repo.",
     stack: ["React", "UI", "Components"],
   },
+  {
+    title: "Emotion Detector AI",
+    liveUrl: "https://emotion-detector-7sqn.vercel.app",
+    repoUrl: "https://github.com/samirschabel-25/emotion-detector",
+    status: "Live",
+    desc: "Full-Stack Machine-Learning-Anwendung zur Erkennung von Emotionen in deutschsprachigen Texten. Entwickelt mit Scikit-Learn, FastAPI und React. Enthält Wahrscheinlichkeitsanalyse, Diagramm-Visualisierung und Analyse-Historie.",
+    stack: [
+      "Python",
+      "Machine Learning",
+      "Scikit-Learn",
+      "FastAPI",
+      "React",
+      "NLP",
+      "Vercel",
+      "Render",
+    ],
+  },
 ];
 
 function Projects() {
