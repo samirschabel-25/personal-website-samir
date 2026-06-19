@@ -18,7 +18,6 @@ function About() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // kleine Reveal-Animation per IntersectionObserver (ohne Library)
   useEffect(() => {
     const els = document.querySelectorAll(".reveal");
     const io = new IntersectionObserver(
@@ -36,15 +35,15 @@ function About() {
 
   const skills = useMemo(
     () => [
+      "Angular",
       "React",
       "Java",
       "Spring Boot",
       "TypeScript",
       "Python",
-      "SQL / PostgreSQL",
+      "SQL",
       "REST APIs",
       "Git",
-      "Data Science",
       "Machine Learning",
     ],
     [],
@@ -67,20 +66,17 @@ function About() {
             Samir<span className="brandAccent">.</span>Portfolio
           </Navbar.Brand>
 
-          <Navbar.Toggle
-            aria-controls="basic-navbar-nav"
-            className="navToggle"
-          />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Toggle className="navToggle" />
+          <Navbar.Collapse>
             <Nav className="ms-auto navLinks">
-              <Nav.Link as={NavLink} to="/home">
+              <Nav.Link as={NavLink} to="/">
                 Home
               </Nav.Link>
               <Nav.Link as={NavLink} to="/about">
                 About
               </Nav.Link>
               <Nav.Link as={NavLink} to="/cv">
-                Curriculum Vitae
+                CV
               </Nav.Link>
               <Nav.Link as={NavLink} to="/projects">
                 Projects
@@ -101,14 +97,15 @@ function About() {
             </p>
 
             <h1 className="heroTitle">
-              Building <span className="gradientText">modern apps</span> with a
-              calm, solution-oriented mindset.
+              Software Developer focused on{" "}
+              <span className="gradientText">modern web applications</span>
             </h1>
 
             <p className="heroSub">
-              Full Stack Developer with hands-on experience in modern Web- and
-              Spring Boot applications — currently strengthening my profile at
-              the intersection of Web Development, Java and Data Science & AI.
+              I build scalable and maintainable web applications with a strong
+              focus on clean architecture, performance and user experience.
+              Alongside frontend and backend development, I integrate data
+              science and AI to create smarter, data-driven solutions.
             </p>
 
             <div className="ctaRow">
@@ -121,9 +118,10 @@ function About() {
                 variant="outline-light"
                 className="ctaSecondary"
               >
-                Open CV
+                Download CV
               </Button>
             </div>
+            <br />
 
             <div className="chipRow reveal">
               {skills.map((s) => (
@@ -136,31 +134,16 @@ function About() {
 
           <div className="heroRight reveal">
             <div className="profileShell">
-              <div className="profileGlow" aria-hidden="true" />
+              <div className="profileGlow" />
               <img
-                src="/myself2.png"
+                src="/Bewerbungsfoto_Samir.png"
                 className="profileImg"
-                alt="Portrait of Samir"
+                alt="Samir Schabel portrait"
                 draggable="false"
               />
               <div className="profileFooter">
-                <span className="ping" aria-hidden="true" />
-                <span>Hamburg • Open for opportunities</span>
-              </div>
-            </div>
-
-            <div className="miniCards">
-              <div className="miniCard">
-                <div className="miniTitle">Now</div>
-                <div className="miniText">
-                  Data Science & AI Upskilling (until Jan 2026)
-                </div>
-              </div>
-              <div className="miniCard">
-                <div className="miniTitle">Focus</div>
-                <div className="miniText">
-                  React UIs • Spring Boot APIs • ML
-                </div>
+                <span className="ping" />
+                <span>Open for opportunities</span>
               </div>
             </div>
           </div>
@@ -172,39 +155,26 @@ function About() {
           <div className="grid2">
             <Card className="glassCard reveal">
               <Card.Body>
-                <h2 className="sectionTitle">My Story</h2>
+                <h2 className="sectionTitle">About</h2>
                 <p className="storyText">
-                  Born on April, 19th, 1988, the technical affinity started very
-                  early in my childhood. But I never thought that this interest
-                  would once lead me one day to a career in IT. After completing
-                  my school education with focus on economics I started my
-                  studies in the field of paedagogy at the Technical University
-                  of Darmstadt. Right after graduating and recieving my
-                  Bachelors degree in 2015, I continued my studies in the field
-                  of Comparative Religion at the University of Hamburg, where I
-                  graduated with a Masters degree in 2018 with an average grade
-                  of 1.3. After trying my best to continue my career at the
-                  university I finally decided to follow my passion for
-                  technology and started a further education as a Web Developer
-                  at neuefische GmbH in Hamburg. Soon after completing the
-                  course I had the opportunity to add another further education
-                  as a Java Developer. And since then I have been working as a
-                  Full Stack Developer with focus on Web Development and Java
-                  Development. I’m a dedicated team player with hands-on
-                  experience developing modern Web - and Spring Boot
-                  applications. Currently, I’m completing a Data Science & AI
-                  upskilling program running through the end of January 2026,
-                  further strengthening my skill set at the intersection of Web
-                  Development, Java Development, and Data Science. I work
-                  independently and in a well-structured way, with strong
-                  initiative and a calm, solution-oriented mindset—allowing me
-                  to deliver convincing results even in new or high-pressure
-                  situations. As a trusted point of contact, I’m known for
-                  professional, collaborative communication with leaders,
-                  colleagues, and internal as well as external stakeholders. In
-                  my free time, I enjoy jogging, singing, reading books,
-                  creating content, and traveling to new places and being the
-                  coach of a junior soccer team.
+                  I am a frontend-focused developer with a strong foundation in
+                  fullstack development. My main goal is to build reliable,
+                  scalable and user-friendly applications that solve real-world
+                  problems.
+                  <br />
+                  <br />
+                  I have experience working with modern frontend technologies
+                  such as Angular and React, combined with backend development
+                  using Java and Spring Boot.
+                  <br />
+                  <br />
+                  In addition, I am expanding my expertise in data science and
+                  artificial intelligence, enabling me to develop smarter and
+                  more data-driven applications.
+                  <br />
+                  <br />I work in a structured and solution-oriented way, enjoy
+                  solving complex problems and continuously improving both code
+                  quality and performance.
                 </p>
               </Card.Body>
             </Card>
@@ -218,9 +188,7 @@ function About() {
                     <div className="tDot" />
                     <div className="tContent">
                       <div className="tWhen">2015</div>
-                      <div className="tWhat">
-                        B.A. (Pedagogy) — TU Darmstadt
-                      </div>
+                      <div className="tWhat">B.A. Pedagogy — TU Darmstadt</div>
                     </div>
                   </div>
 
@@ -229,8 +197,7 @@ function About() {
                     <div className="tContent">
                       <div className="tWhen">2018</div>
                       <div className="tWhat">
-                        M.A. (Comparative Religion) — University of Hamburg
-                        (1.3)
+                        M.A. Comparative Religion — University of Hamburg
                       </div>
                     </div>
                   </div>
@@ -240,8 +207,7 @@ function About() {
                     <div className="tContent">
                       <div className="tWhen">2020 →</div>
                       <div className="tWhat">
-                        Full Stack Developer — Web Development & Java (Spring
-                        Boot)
+                        Software Developer — Web & Java Development
                       </div>
                     </div>
                   </div>
@@ -249,10 +215,9 @@ function About() {
                   <div className="tItem">
                     <div className="tDot" />
                     <div className="tContent">
-                      <div className="tWhen">Now → Jan 2026</div>
+                      <div className="tWhen">Now → 2026</div>
                       <div className="tWhat">
-                        Data Science & AI Upskilling — building projects at the
-                        intersection of web & ML
+                        Data Science & AI — building data-driven applications
                       </div>
                     </div>
                   </div>
@@ -262,11 +227,10 @@ function About() {
 
                 <h3 className="subTitle">What I enjoy</h3>
                 <ul className="niceList">
-                  <li>Jogging & staying consistent</li>
-                  <li>Singing & creative work</li>
-                  <li>Reading & learning</li>
-                  <li>Traveling to new places</li>
-                  <li>Coaching a junior soccer team</li>
+                  <li>Solving complex problems</li>
+                  <li>Building clean and scalable systems</li>
+                  <li>Learning new technologies</li>
+                  <li>Sports & consistency</li>
                 </ul>
               </Card.Body>
             </Card>
@@ -276,8 +240,8 @@ function About() {
             <Card.Body>
               <div className="quoteMark">“</div>
               <div className="quoteText">
-                I value calm communication, structured work, and practical
-                solutions — especially when things get complex.
+                I focus on building solutions that are not only functional, but
+                also clean, scalable and reliable.
               </div>
               <div className="quoteFooter">— Samir</div>
             </Card.Body>

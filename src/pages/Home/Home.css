@@ -509,3 +509,18 @@
     scroll-behavior: auto !important;
   }
 }
+
+.heroSub {
+  margin-top: 1rem;
+  max-width: 60ch;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.heroTitle {
+  margin-top: 1.2rem;
+  font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+  line-height: 1.05;
+  font-weight: 900;
+}
